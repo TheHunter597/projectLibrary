@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { ValidationError } from "../ErrorHandlers/ValidationError";
 
-const validateInputs = (inputs: string[]) => {
+export const validateInputs = (inputs: string[]) => {
   return (req: Request, res: Response, next: NextFunction) => {
     for (let i = 0; i < inputs.length; i++) {
       if (!req.body.hasOwnProperty(inputs[i])) {
@@ -12,5 +12,3 @@ const validateInputs = (inputs: string[]) => {
     next();
   };
 };
-
-export default validateInputs;
