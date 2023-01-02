@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.checkUserSignedIn = void 0;
 const notAuthorized_1 = require("../ErrorHandlers/notAuthorized");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 function checkUserSignedIn(req, res, next) {
@@ -25,4 +26,4 @@ function checkUserSignedIn(req, res, next) {
         next();
     });
 }
-exports.default = checkUserSignedIn;
+exports.checkUserSignedIn = checkUserSignedIn;

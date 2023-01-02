@@ -10,5 +10,5 @@ declare global {
         }
     }
 }
-declare function checkUserSignedIn(req: Request, res: Response, next: NextFunction): Promise<void>;
-export default checkUserSignedIn;
+export declare function checkUserSignedIn(req: Request, res: Response, next: NextFunction): Promise<void>;
+export {};

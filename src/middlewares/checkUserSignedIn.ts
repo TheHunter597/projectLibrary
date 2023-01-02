@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-async function checkUserSignedIn(
+export async function checkUserSignedIn(
   req: Request,
   res: Response,
   next: NextFunction
@@ -30,5 +30,3 @@ async function checkUserSignedIn(
   req.user = data;
   next();
 }
-
-export default checkUserSignedIn;
