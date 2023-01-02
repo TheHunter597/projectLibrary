@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.validateInputs = void 0;
 const ValidationError_1 = require("../ErrorHandlers/ValidationError");
 const validateInputs = (inputs) => {
     return (req, res, next) => {
@@ -12,4 +13,4 @@ const validateInputs = (inputs) => {
         next();
     };
 };
-exports.default = validateInputs;
+exports.validateInputs = validateInputs;
